@@ -18,8 +18,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -98,11 +97,7 @@ PRODUCT_PACKAGES += \
     libbt-vendor \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0-service
-
-# Browser
-PRODUCT_PACKAGES += \
-    Gello
-
+    
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
@@ -110,8 +105,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     android.hardware.camera.provider@2.4-impl \
     libshim_camera_hal \
-    libshims_camera \
-    SnapdragonCamera
+    libshims_camera
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/msm8953_mot_potter_camera.xml:system/etc/camera/msm8953_mot_potter_camera.xml \
@@ -131,8 +125,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/cacert_location.pem:system/vendor/etc/cacert_location.pem
 
 # MotoActions
-PRODUCT_PACKAGES += \
-    MotoActions
+#PRODUCT_PACKAGES += \
+#    MotoActions
 
 # Display
 PRODUCT_PACKAGES += \
@@ -386,10 +380,6 @@ PRODUCT_PACKAGES += \
     wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf
-
-# Launcher3
-PRODUCT_PACKAGES += \
-    Launcher3
 
 #Thermal
 PRODUCT_PACKAGES += android.hardware.thermal@1.0-impl \
