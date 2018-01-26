@@ -175,18 +175,17 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
 
 # GNSS HAL
-#PRODUCT_PACKAGES += \
-#    android.hardware.gnss@1.0-impl
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
 
 # GPS
 PRODUCT_PACKAGES += \
     libgps.utils \
     gps.default \
+    libgnss \
     liblocation_api \
+    android.hardware.gnss@1.0-impl-qti \
     libloc_api-rpc-qc
-#    libgnss \
-#    android.hardware.gnss@1.0-impl-qti \
-    
 
 # health
 PRODUCT_PACKAGES += \
