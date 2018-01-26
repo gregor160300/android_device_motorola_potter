@@ -156,7 +156,7 @@ mm.enable.smoothstreaming=false
 mmp.enable.3g2=true
 
 # USB debugging at boot
-persist.sys.usb.config=mtp,adb
+sys.usb.config=adb
 ro.adb.secure=0
 ro.secure=0
 ro.debuggable=1
