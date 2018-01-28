@@ -129,7 +129,6 @@ QCOM_BT_READ_ADDR_FROM_PROP := true
 TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
 TARGET_QCOM_AUDIO_VARIANT := caf-msm8996
 TARGET_QCOM_MEDIA_VARIANT := caf-msm8996
-TARGET_QCOM_BLUETOOTH_VARIANT := caf-msm8996
 
 # Camera
 # TARGET_CAMERASERVICE_CLOSES_NATIVE_HANDLES := true
@@ -143,20 +142,14 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_NO_CHARGER_LED := true
 
-# CMHW
-BOARD_USES_CYANOGEN_HARDWARE := true
+# DT2W
 TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
-BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw
 
 # CNE / DPM
 BOARD_USES_QCNE := true
 
 # CPUsets
 ENABLE_CPUSETS := true
-
-# Crypto
-TARGET_HW_DISK_ENCRYPTION := true
-TARGET_CRYPTFS_HW_PATH := $(DEVICE_PATH)/cryptfs_hw
 
 # Display
 BOARD_USES_ADRENO := true
@@ -212,7 +205,6 @@ TARGET_PER_MGR_ENABLED := true
 TARGET_PROVIDES_POWERHAL := true
 
 # QC flags
-BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
@@ -228,7 +220,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
-include vendor/omni/sepolicy/sepolicy.mk
 
 # Sensor
 USE_SENSOR_MULTI_HAL := true
